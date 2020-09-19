@@ -8,7 +8,7 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) Math.round((Math.random() * 30) - 15);
             System.out.println(array[i]);
-        }
+        }//генерируем последовательностьс
         Logic.Result result = Logic.MinMax(array);
 
         System.out.println("Минимальные числа:");
