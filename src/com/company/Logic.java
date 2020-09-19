@@ -2,7 +2,7 @@ package com.company;
 
 public class Logic {
 
-    static class Result {//для вывода результата
+    public static class Result {//для вывода результата
         public int min1;
         public int min2;
         public int max1;

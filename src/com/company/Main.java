@@ -11,6 +11,7 @@ public class Main {
         }//генерируем последовательностьс
         Logic.Result result = Logic.MinMax(array);
 
+        System.out.println(result);
         System.out.println("Минимальные числа:");
         System.out.println(result.min1);
         System.out.println(result.min2);
