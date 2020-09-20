@@ -17,7 +17,7 @@ public class Logic {
     }
 
     //найти два наибольших и два наименьших элемента
-    public static Result MinMax(int array[]) {
+    public static Result GetMinMax(int[] array) {
         int buff;
         int min1, min2, max1, max2;
 
@@ -33,7 +33,6 @@ public class Logic {
             max2 = 1;
         }
 
-
         for (int i = 2; i < array.length; i++) {
             if (array[i] < array[min1]) {//если текущий эл массива меньше первого минимального
                 buff = min1;//запоминаем его индекс, чтобы дальше проверить
@@ -41,12 +40,11 @@ public class Logic {
                 if (array[buff] < array[min2]) {//присвоение от первого минимального второму
                     min2 = buff;
                 }
-
             } else if (array[i] < array[min2]) {//текущий элемент меньше второго минимального
                 min2 = i;
             }
-
         }
+
         for (int i = 2; i < array.length; i++) {//аналогично для максимума
             if (array[i] > array[max1]) {
                 buff = max1;
@@ -54,15 +52,11 @@ public class Logic {
                 if (array[buff] > array[max2]) {
                     max2 = buff;
                 }
-
             } else if (array[i] > array[max2]) {
                 max2 = i;
             }
-
-
         }
 
         return new Result(array[min1], array[min2], array[max1], array[max2]);//
     }
-
 }

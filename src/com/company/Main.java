@@ -3,14 +3,14 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
         int[] array = new int[12];
+
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) Math.round((Math.random() * 30) - 15);
             System.out.println(array[i]);
-        }//генерируем последовательностьс
-        Logic.Result result = Logic.MinMax(array);
-
+        }//генерируем последовательность
+        Logic.Result result = Logic.GetMinMax(array);
         System.out.println(result);
         System.out.println("Минимальные числа:");
         System.out.println(result.min1);
